@@ -3,20 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Climbing Diary - pomoc i usuwanie konta</title>
+  <title>Climbing Diary - dziennik wspinacza</title>
+  <meta name="description" content="Climbing Diary to aplikacja Android do zapisywania dróg, sesji, projektów, wyzwań, treningów i postępów wspinaczkowych.">
   <style>
     :root {
       color-scheme: light;
       --bg: #f4f6f1;
       --surface: #ffffff;
+      --surface-soft: #e7efea;
       --text: #1c211f;
       --muted: #5f6b66;
       --green: #2f6758;
+      --green-dark: #244c42;
+      --amber: #b8682c;
       --blue: #3f6c8f;
       --red: #7a2e2e;
       --stroke: #d9dfd8;
+      --shadow: 0 18px 40px rgba(28, 33, 31, 0.12);
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -24,94 +30,349 @@
       color: var(--text);
       line-height: 1.55;
     }
-    main {
-      width: min(920px, calc(100% - 32px));
+    a { color: inherit; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(244, 246, 241, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(217, 223, 216, 0.8);
+    }
+    .nav-inner {
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 40px 0 56px;
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
     }
-    header {
-      border-left: 8px solid var(--green);
-      padding: 8px 0 8px 18px;
-      margin-bottom: 22px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
     }
-    h1 { margin: 0; font-size: 34px; }
-    h2 { margin: 0 0 10px; font-size: 23px; }
-    h3 { margin: 18px 0 6px; font-size: 17px; }
-    p { margin: 0 0 12px; color: var(--muted); }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--stroke);
-      border-left: 8px solid var(--green);
-      border-radius: 14px;
-      padding: 22px;
-      margin: 16px 0;
-      box-shadow: 0 12px 28px rgba(28, 33, 31, 0.08);
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(47, 103, 88, 0.2);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .nav-links a { text-decoration: none; }
+    .hero {
+      min-height: 82vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(28, 33, 31, 0.84), rgba(28, 33, 31, 0.48), rgba(28, 33, 31, 0.14)),
+        url("assets/background_image.png") center / cover no-repeat;
+    }
+    .hero-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 96px 0 56px;
+      color: #fff;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(231, 239, 234, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 18px 0 12px;
+      max-width: 760px;
+      font-size: clamp(42px, 8vw, 82px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+    .hero p {
+      max-width: 640px;
+      margin: 0 0 24px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 19px;
     }
     .actions {
       display: flex;
       flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border-radius: 12px;
+      padding: 12px 18px;
+      border: 0;
+      text-decoration: none;
+      font-weight: 800;
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 14px 28px rgba(47, 103, 88, 0.24);
+    }
+    .button.secondary { background: #fff; color: var(--green-dark); }
+    .button.blue { background: var(--blue); }
+    .button.red { background: var(--red); }
+    .section {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 64px 0 0;
+    }
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+    }
+    .section > p {
+      max-width: 720px;
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--stroke);
+      border-left: 8px solid var(--green);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .card.amber { border-left-color: var(--amber); }
+    .card.blue { border-left-color: var(--blue); }
+    .card.red { border-left-color: var(--red); }
+    .card h3 { margin: 0 0 8px; font-size: 20px; }
+    .card p, .card li { color: var(--muted); }
+    .card p { margin: 0; }
+    .pill {
+      display: inline-flex;
+      margin-bottom: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .mockup {
+      background: #10201b;
+      color: #fff;
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      min-height: 420px;
+    }
+    .mock-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-left: 6px solid #55a38e;
+      border-radius: 14px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       margin-top: 16px;
     }
-    a.button {
-      display: inline-block;
-      color: #fff;
-      background: var(--green);
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 10px;
-      padding: 12px 16px;
+    .metric {
+      background: var(--surface-soft);
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
     }
-    a.button.secondary { background: var(--blue); }
-    a.button.danger { background: var(--red); }
-    ul { margin-top: 8px; color: var(--muted); }
-    footer { margin-top: 28px; color: var(--muted); font-size: 13px; }
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      color: var(--green-dark);
+    }
+    footer {
+      margin-top: 64px;
+      padding: 34px 0;
+      background: #16231f;
+      color: rgba(255, 255, 255, 0.76);
+    }
+    footer .footer-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 820px) {
+      .nav-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .nav-links { flex-wrap: wrap; }
+      .grid, .split, .metric-row { grid-template-columns: 1fr; }
+      .hero { min-height: 78vh; }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <header>
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Climbing Diary">
+        <img src="assets/app_icon.webp" alt="">
+        <span>Climbing Diary</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Funkcje</a>
+        <a href="#sections">Sekcje i trenerzy</a>
+        <a href="#support">Pomoc</a>
+        <a href="#delete">Usunięcie konta</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow">Android • dziennik • analizy • wyzwania</span>
       <h1>Climbing Diary</h1>
-      <p>Pomoc, krótki manual i zgłoszenia dotyczące konta.</p>
-    </header>
-
-    <section class="card">
-      <h2>Krótki manual</h2>
-      <h3>Wspinanie i dziennik</h3>
-      <p>Zapisuj ukończone drogi, buldery, projekty i próby z sesji. Projekty nie są liczone jako ukończone przejścia, dopóki nie oznaczysz ich jako zrobione.</p>
-      <h3>Analizy</h3>
-      <p>Analizy pokazują rozkład wycen, strukturę wspinania, trend progresu i piramidę przejść pod wybrany cel.</p>
-      <h3>Wyzwania i treningi</h3>
-      <p>Użytkownicy Premium mogą zapraszać znajomych i grupy do wyzwań oraz umawiać treningi.</p>
-      <h3>Profil</h3>
-      <p>Profil zawiera konto, znajomych, grupy, testy sportowe, prywatność, język i motyw aplikacji.</p>
-    </section>
-
-    <section class="card">
-      <h2>Zgłoś błąd</h2>
-      <p>Opisz, co się stało, jaki telefon był używany i jakie kroki prowadzą do problemu. Jeśli możesz, dodaj zrzut ekranu.</p>
+      <p>Dziennik wspinacza do zapisywania dróg, sesji, projektów, treningów i postępów. Dla osób trenujących samodzielnie oraz dla sekcji wspinaczkowych.</p>
       <div class="actions">
-        <a class="button secondary" href="mailto:hudy06@o2.pl?subject=Zg%C5%82oszenie%20b%C5%82%C4%99du%20Climbing%20Diary">Wyślij zgłoszenie</a>
+        <a class="button" href="#download">Pobierz z Google Play</a>
+        <a class="button secondary" href="#features">Zobacz funkcje</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="features">
+      <h2>Jedno miejsce na cały proces wspinaczkowy</h2>
+      <p>Aplikacja łączy dziennik przejść, projekty, analizy, wyzwania, sesje i profil sportowy. Dzięki temu użytkownik widzi nie tylko co zrobił, ale też co blokuje dalszy progres.</p>
+      <div class="grid">
+        <article class="card">
+          <span class="pill">Dziennik</span>
+          <h3>Drogi, buldery i projekty</h3>
+          <p>Zapis ukończonych dróg, projektów, miejsca, daty, wyceny, stylu, notatek oraz lokalizacji GPS.</p>
+        </article>
+        <article class="card amber">
+          <span class="pill">Analizy</span>
+          <h3>Piramida przejść</h3>
+          <p>Rozkład wycen, struktura skały/panel, trend progresu i rekomendacje pod wybrany cel wspinaczkowy.</p>
+        </article>
+        <article class="card blue">
+          <span class="pill">Społeczność</span>
+          <h3>Wyzwania i treningi</h3>
+          <p>Zaproszenia znajomych, grupy, wyzwania, umówione treningi i postęp uczestników.</p>
+        </article>
       </div>
     </section>
 
-    <section class="card">
+    <section class="section">
+      <div class="split">
+        <div>
+          <h2>Free Local i Premium</h2>
+          <p>Tryb lokalny pozwala prowadzić własny dziennik bez synchronizacji. Premium odblokowuje Firebase, znajomych, wyzwania, grupy i synchronizację między urządzeniami.</p>
+          <div class="metric-row">
+            <div class="metric"><strong>4</strong><span>typy aktywności</span></div>
+            <div class="metric"><strong>24h</strong><span>czasowe odblokowania</span></div>
+            <div class="metric"><strong>2</strong><span>języki startowe</span></div>
+          </div>
+        </div>
+        <div class="mockup" aria-label="Podgląd aplikacji">
+          <h3>Panel wspinacza</h3>
+          <div class="mock-card"><strong>Dzisiaj</strong><br>Zaproszenia, treningi i aktywne wyzwania.</div>
+          <div class="mock-card"><strong>Postęp</strong><br>Najlepsze wyceny, projekty i cele.</div>
+          <div class="mock-card"><strong>Szybko dodaj</strong><br>Droga, sesja, projekt albo trening.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sections">
+      <h2>Dla sekcji i trenerów</h2>
+      <p>Climbing Diary może służyć jako proste narzędzie dla grup wspinaczkowych: trener widzi zawodników, grupy, wyzwania i może łatwiej zadawać cele treningowe.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Grupy znajomych</h3>
+          <p>Tworzenie grup, szybkie zapraszanie kilku osób i wygodniejsza praca z sekcją.</p>
+        </article>
+        <article class="card">
+          <h3>Wyzwania</h3>
+          <p>Cel liczbowy, minimalna wycena, zakres wycen i daty. Wyzwania wygasają i trafiają do archiwum.</p>
+        </article>
+        <article class="card">
+          <h3>Testy sportowe</h3>
+          <p>Profil fizyczny, historia testów i przypomnienie, aby powtarzać testy co 3-4 miesiące.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <div class="card blue">
+        <h2>Google Play</h2>
+        <p>Aplikacja jest obecnie przygotowywana do testów i publikacji. Po udostępnieniu w Google Play ten przycisk będzie prowadził bezpośrednio do sklepu.</p>
+        <div class="actions">
+          <a class="button blue" href="#" aria-disabled="true">Google Play - wkrótce</a>
+          <a class="button secondary" href="mailto:hudy06@o2.pl?subject=Climbing%20Diary%20-%20testy">Kontakt w sprawie testów</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="support">
+      <h2>Pomoc i zgłaszanie błędów</h2>
+      <p>Jeśli testujesz aplikację, opisz problem, model telefonu i kroki prowadzące do błędu. Najlepiej dołącz zrzut ekranu.</p>
+      <div class="card">
+        <h3>Zgłoś błąd</h3>
+        <p>Na etapie testów najprostsza ścieżka to e-mail z opisem błędu.</p>
+        <div class="actions">
+          <a class="button blue" href="mailto:hudy06@o2.pl?subject=Zg%C5%82oszenie%20b%C5%82%C4%99du%20Climbing%20Diary">Wyślij zgłoszenie</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="delete">
       <h2>Usunięcie konta i danych</h2>
-      <p>Konto możesz usunąć bezpośrednio w aplikacji: Profil → Dane i prywatność → Usuń konto i dane w chmurze.</p>
-      <p>Jeśli nie masz dostępu do aplikacji, możesz wysłać prośbę e-mailem. W wiadomości podaj adres e-mail konta używany w aplikacji.</p>
-      <ul>
-        <li>Usuwane są dane konta, profil Firebase i zsynchronizowane dane aplikacji.</li>
-        <li>Usunięcie jest trwałe i nie można go cofnąć.</li>
-        <li>W przypadku aktywnej subskrypcji lub płatności może być konieczne osobne anulowanie jej w Google Play.</li>
-      </ul>
-      <div class="actions">
-        <a class="button danger" href="mailto:hudy06@o2.pl?subject=Pro%C5%9Bba%20o%20usuni%C4%99cie%20konta%20Climbing%20Diary">Poproś o usunięcie konta</a>
+      <p>Konto możesz usunąć bezpośrednio w aplikacji: Profil → Dane i prywatność → Usuń konto i dane w chmurze. Jeśli nie masz dostępu do aplikacji, wyślij prośbę e-mailem.</p>
+      <div class="card red">
+        <h3>Co zostanie usunięte?</h3>
+        <ul>
+          <li>konto logowania i profil użytkownika,</li>
+          <li>zsynchronizowane dane w Firebase,</li>
+          <li>dane powiązane z dziennikiem, znajomymi i grupami.</li>
+        </ul>
+        <div class="actions">
+          <a class="button red" href="mailto:hudy06@o2.pl?subject=Pro%C5%9Bba%20o%20usuni%C4%99cie%20konta%20Climbing%20Diary">Poproś o usunięcie konta</a>
+        </div>
       </div>
     </section>
-
-    <footer>
-      Climbing Diary. Ta strona jest przygotowana do publikacji jako statyczna strona pomocy aplikacji.
-    </footer>
   </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>Climbing Diary</span>
+      <span>Kontakt: <a href="mailto:hudy06@o2.pl">hudy06@o2.pl</a></span>
+      <span><a href="#delete">Usunięcie konta</a></span>
+    </div>
+  </footer>
 </body>
 </html>
