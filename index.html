@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Climbing Diary - pomoc i usuwanie konta</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f6f1;
+      --surface: #ffffff;
+      --text: #1c211f;
+      --muted: #5f6b66;
+      --green: #2f6758;
+      --blue: #3f6c8f;
+      --red: #7a2e2e;
+      --stroke: #d9dfd8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 56px;
+    }
+    header {
+      border-left: 8px solid var(--green);
+      padding: 8px 0 8px 18px;
+      margin-bottom: 22px;
+    }
+    h1 { margin: 0; font-size: 34px; }
+    h2 { margin: 0 0 10px; font-size: 23px; }
+    h3 { margin: 18px 0 6px; font-size: 17px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--stroke);
+      border-left: 8px solid var(--green);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 16px 0;
+      box-shadow: 0 12px 28px rgba(28, 33, 31, 0.08);
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    a.button {
+      display: inline-block;
+      color: #fff;
+      background: var(--green);
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+    a.button.secondary { background: var(--blue); }
+    a.button.danger { background: var(--red); }
+    ul { margin-top: 8px; color: var(--muted); }
+    footer { margin-top: 28px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Climbing Diary</h1>
+      <p>Pomoc, krótki manual i zgłoszenia dotyczące konta.</p>
+    </header>
+
+    <section class="card">
+      <h2>Krótki manual</h2>
+      <h3>Wspinanie i dziennik</h3>
+      <p>Zapisuj ukończone drogi, buldery, projekty i próby z sesji. Projekty nie są liczone jako ukończone przejścia, dopóki nie oznaczysz ich jako zrobione.</p>
+      <h3>Analizy</h3>
+      <p>Analizy pokazują rozkład wycen, strukturę wspinania, trend progresu i piramidę przejść pod wybrany cel.</p>
+      <h3>Wyzwania i treningi</h3>
+      <p>Użytkownicy Premium mogą zapraszać znajomych i grupy do wyzwań oraz umawiać treningi.</p>
+      <h3>Profil</h3>
+      <p>Profil zawiera konto, znajomych, grupy, testy sportowe, prywatność, język i motyw aplikacji.</p>
+    </section>
+
+    <section class="card">
+      <h2>Zgłoś błąd</h2>
+      <p>Opisz, co się stało, jaki telefon był używany i jakie kroki prowadzą do problemu. Jeśli możesz, dodaj zrzut ekranu.</p>
+      <div class="actions">
+        <a class="button secondary" href="mailto:hudy06@o2.pl?subject=Zg%C5%82oszenie%20b%C5%82%C4%99du%20Climbing%20Diary">Wyślij zgłoszenie</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Usunięcie konta i danych</h2>
+      <p>Konto możesz usunąć bezpośrednio w aplikacji: Profil → Dane i prywatność → Usuń konto i dane w chmurze.</p>
+      <p>Jeśli nie masz dostępu do aplikacji, możesz wysłać prośbę e-mailem. W wiadomości podaj adres e-mail konta używany w aplikacji.</p>
+      <ul>
+        <li>Usuwane są dane konta, profil Firebase i zsynchronizowane dane aplikacji.</li>
+        <li>Usunięcie jest trwałe i nie można go cofnąć.</li>
+        <li>W przypadku aktywnej subskrypcji lub płatności może być konieczne osobne anulowanie jej w Google Play.</li>
+      </ul>
+      <div class="actions">
+        <a class="button danger" href="mailto:hudy06@o2.pl?subject=Pro%C5%9Bba%20o%20usuni%C4%99cie%20konta%20Climbing%20Diary">Poproś o usunięcie konta</a>
+      </div>
+    </section>
+
+    <footer>
+      Climbing Diary. Ta strona jest przygotowana do publikacji jako statyczna strona pomocy aplikacji.
+    </footer>
+  </main>
+</body>
+</html>
