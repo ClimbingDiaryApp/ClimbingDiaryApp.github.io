@@ -6,6 +6,10 @@ Live URL:
 
 `https://climbingdiaryapp.github.io/`
 
+Privacy policy:
+
+`https://climbingdiaryapp.github.io/privacy-policy.html`
+
 Repository:
 
 `https://github.com/ClimbingDiaryApp/ClimbingDiaryApp.github.io`

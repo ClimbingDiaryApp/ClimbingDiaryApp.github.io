@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Climbing Diary - Polityka prywatności</title>
+  <link rel="canonical" href="https://climbingdiaryapp.github.io/privacy-policy.html">
+  <style>
+    :root {
+      --bg: #f4f6f1;
+      --surface: #ffffff;
+      --text: #1c211f;
+      --muted: #5f6b66;
+      --green: #2f6758;
+      --blue: #3f6c8f;
+      --red: #7a2e2e;
+      --stroke: #d9dfd8;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 44px 0 56px; }
+    header, section { background: var(--surface); border: 1px solid var(--stroke); border-left: 8px solid var(--green); border-radius: 16px; padding: 24px; margin: 0 0 16px; }
+    h1, h2 { margin-top: 0; }
+    h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.05; }
+    h2 { color: var(--green); }
+    p, li { color: var(--muted); }
+    a { color: var(--blue); font-weight: 700; }
+    .note { border-left-color: var(--blue); }
+    .danger { border-left-color: var(--red); }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Polityka prywatności Climbing Diary</h1>
+    <p>Ostatnia aktualizacja: 8 lipca 2026.</p>
+    <p>Kontakt w sprawach prywatności i danych: <a href="mailto:climbingdiaryapp@gmail.com">climbingdiaryapp@gmail.com</a>.</p>
+  </header>
+  <section>
+    <h2>1. Zakres</h2>
+    <p>Ta polityka opisuje, jakie dane mogą być przetwarzane przez aplikację Climbing Diary na Androida oraz stronę pomocy aplikacji.</p>
+  </section>
+  <section>
+    <h2>2. Tryby aplikacji</h2>
+    <ul>
+      <li><strong>Free Local</strong>: dziennik wspinaczkowy działa lokalnie na telefonie. Dane dróg nie są synchronizowane z Firebase.</li>
+      <li><strong>Premium</strong>: po zalogowaniu aplikacja może synchronizować dane z Firebase, aby działały znajomi, grupy, wyzwania, treningi i synchronizacja między urządzeniami.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>3. Kategorie danych</h2>
+    <ul>
+      <li>Dane konta: adres e-mail, identyfikator użytkownika Firebase, opcjonalnie imię, nazwisko, nazwa profilu, numer telefonu i zdjęcie profilu.</li>
+      <li>Dane wspinaczkowe: drogi, buldery, projekty, próby, sesje, wyceny, style przejścia, daty, notatki, typ miejsca i opcjonalne współrzędne GPS.</li>
+      <li>Dane społecznościowe: znajomi, grupy znajomych, zaproszenia, wyzwania i umówione treningi.</li>
+      <li>Dane techniczne: diagnostyka awarii przez Firebase Crashlytics, np. informacje o błędzie, wersji aplikacji i urządzeniu.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>4. Uprawnienia Androida</h2>
+    <ul>
+      <li><strong>Lokalizacja</strong>: używana tylko wtedy, gdy użytkownik wybierze dodanie aktualnej lokalizacji GPS do wpisu.</li>
+      <li><strong>Kontakty</strong>: używane tylko po wybraniu funkcji szukania znajomego z kontaktów telefonu. Aplikacja sprawdza, czy numer jest zarejestrowany w Firebase.</li>
+      <li><strong>Aparat i media</strong>: używane do zdjęcia profilu oraz lokalnych załączników do drogi lub projektu.</li>
+      <li><strong>Powiadomienia</strong>: używane do informacji o zaproszeniach, treningach, wyzwaniach i terminach.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>5. Udostępnianie i widoczność</h2>
+    <p>Dane nie są sprzedawane. Dane mogą być przetwarzane przez dostawców technicznych niezbędnych do działania aplikacji, w szczególności Firebase Authentication, Cloud Firestore, Firebase Crashlytics i Firebase App Check.</p>
+    <p>W aplikacji można ustawić widoczność profilu: wyszukiwanie po e-mailu, wyszukiwanie po telefonie, widoczność telefonu dla znajomych i widoczność zdjęcia profilu.</p>
+  </section>
+  <section>
+    <h2>6. Przechowywanie danych</h2>
+    <p>Dane lokalne pozostają na urządzeniu do czasu ich usunięcia przez użytkownika albo odinstalowania aplikacji. Dane zsynchronizowane są przechowywane w Firebase do czasu usunięcia konta lub danych przez użytkownika.</p>
+  </section>
+  <section class="danger">
+    <h2>7. Usunięcie konta i danych</h2>
+    <p>Konto można usunąć w aplikacji: Profil → Dane i prywatność → Usuń konto i dane w chmurze.</p>
+    <p>Jeśli nie masz dostępu do aplikacji, wyślij prośbę na <a href="mailto:climbingdiaryapp@gmail.com?subject=Pro%C5%9Bba%20o%20usuni%C4%99cie%20konta%20Climbing%20Diary">climbingdiaryapp@gmail.com</a>. W wiadomości podaj adres e-mail konta używany w aplikacji.</p>
+  </section>
+  <section class="note">
+    <h2>8. Strona pomocy</h2>
+    <p>Strona aplikacji, pomoc dla testerów i zgłaszanie błędów są dostępne pod adresem <a href="https://climbingdiaryapp.github.io/">https://climbingdiaryapp.github.io/</a>.</p>
+  </section>
+</main>
+</body>
+</html>
