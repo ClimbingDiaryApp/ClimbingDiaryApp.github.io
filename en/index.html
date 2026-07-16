@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Climbing Diary - dziennik wspinacza</title>
-  <meta name="description" content="Climbing Diary to aplikacja Android do zapisywania dróg, sesji, projektów, wyzwań, treningów i postępów wspinaczkowych.">
+  <title>Climbing Diary - climbing logbook app</title>
+  <meta name="description" content="Climbing Diary is an Android app for logging routes, sessions, projects, challenges, trainings and climbing progress.">
+  <link rel="canonical" href="https://climbingdiaryapp.github.io/en/">
   <style>
     :root {
       color-scheme: light;
@@ -77,7 +78,7 @@
       overflow: hidden;
       background:
         linear-gradient(90deg, rgba(28, 33, 31, 0.84), rgba(28, 33, 31, 0.48), rgba(28, 33, 31, 0.14)),
-        url("assets/background_image.png") center / cover no-repeat;
+        url("../assets/background_image.png") center / cover no-repeat;
     }
     .hero-inner {
       width: min(1120px, calc(100% - 32px));
@@ -241,52 +242,51 @@
   <nav>
     <div class="nav-inner">
       <a class="brand" href="#top" aria-label="Climbing Diary">
-        <img src="assets/app_icon.webp" alt="">
+        <img src="../assets/app_icon.webp" alt="">
         <span>Climbing Diary</span>
       </a>
       <div class="nav-links">
-        <a href="#features">Funkcje</a>
-        <a href="#sections">Sekcje i trenerzy</a>
-        <a href="#support">Pomoc</a>
-        <a href="#testers">Testy</a>
-        <a href="privacy-policy.html">Prywatność</a>
-        <a href="#delete">Usunięcie konta</a>
-        <a href="en/">English</a>
+        <a href="#features">Features</a>
+        <a href="#sections">Teams</a>
+        <a href="#support">Support</a>
+        <a href="#testers">Testing</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="../">Polski</a>
       </div>
     </div>
   </nav>
 
   <header class="hero" id="top">
     <div class="hero-inner">
-      <span class="eyebrow">Android • dziennik • analizy • wyzwania</span>
+      <span class="eyebrow">Android - logbook - analytics - challenges</span>
       <h1>Climbing Diary</h1>
-      <p>Dziennik wspinacza do zapisywania dróg, sesji, projektów, treningów i postępów. Dla osób trenujących samodzielnie oraz dla sekcji wspinaczkowych.</p>
+      <p>A climbing logbook for routes, sessions, projects, trainings and progress. Built for individual climbers, climbing groups and coaches.</p>
       <div class="actions">
-        <a class="button" href="#download">Pobierz z Google Play</a>
-        <a class="button secondary" href="#features">Zobacz funkcje</a>
+        <a class="button" href="#download">Get it on Google Play</a>
+        <a class="button secondary" href="#features">See features</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="section" id="features">
-      <h2>Jedno miejsce na cały proces wspinaczkowy</h2>
-      <p>Aplikacja łączy dziennik przejść, projekty, analizy, wyzwania, sesje i profil sportowy. Dzięki temu użytkownik widzi nie tylko co zrobił, ale też co blokuje dalszy progres.</p>
+      <h2>One place for your climbing progress</h2>
+      <p>The app combines a climbing logbook, projects, analytics, challenges, sessions and sport profile. It helps you see what you have done and what may be blocking your next grade.</p>
       <div class="grid">
         <article class="card">
-          <span class="pill">Dziennik</span>
-          <h3>Drogi, buldery i projekty</h3>
-          <p>Zapis ukończonych dróg, projektów, miejsca, daty, wyceny, stylu, notatek oraz lokalizacji GPS.</p>
+          <span class="pill">Logbook</span>
+          <h3>Routes, boulders and projects</h3>
+          <p>Save completed climbs, projects, place, date, grade, style, notes and optional GPS location.</p>
         </article>
         <article class="card amber">
-          <span class="pill">Analizy</span>
-          <h3>Piramida przejść</h3>
-          <p>Rozkład wycen, struktura skały/panel, trend progresu i rekomendacje pod wybrany cel wspinaczkowy.</p>
+          <span class="pill">Analytics</span>
+          <h3>Progress pyramid</h3>
+          <p>Grade distribution, rock/gym structure, progress trend and recommendations for your target grade.</p>
         </article>
         <article class="card blue">
-          <span class="pill">Społeczność</span>
-          <h3>Wyzwania i treningi</h3>
-          <p>Zaproszenia znajomych, grupy, wyzwania, umówione treningi i postęp uczestników.</p>
+          <span class="pill">Community</span>
+          <h3>Challenges and trainings</h3>
+          <p>Friend invitations, groups, challenges, planned trainings and participant progress.</p>
         </article>
       </div>
     </section>
@@ -294,38 +294,38 @@
     <section class="section">
       <div class="split">
         <div>
-          <h2>Free Local, Trial i Premium</h2>
-          <p>Tryb lokalny pozwala prowadzić własny dziennik bez synchronizacji. Pierwsze uruchomienie daje 7 dni Trial Premium, a subskrypcja Premium odblokowuje Firebase, znajomych, wyzwania, grupy i synchronizację między urządzeniami.</p>
+          <h2>Free Local, Trial and Premium</h2>
+          <p>Free Local lets you keep a private logbook without cloud sync. The first app launch starts a 7-day Trial Premium, while Premium subscription unlocks Firebase sync, friends, challenges, groups and multi-device access.</p>
           <div class="metric-row">
-            <div class="metric"><strong>4</strong><span>typy aktywności</span></div>
-            <div class="metric"><strong>7 dni</strong><span>Trial Premium</span></div>
-            <div class="metric"><strong>Premium</strong><span>chmura i wyzwania</span></div>
+            <div class="metric"><strong>4</strong><span>activity types</span></div>
+            <div class="metric"><strong>7 days</strong><span>Trial Premium</span></div>
+            <div class="metric"><strong>Premium</strong><span>cloud and challenges</span></div>
           </div>
         </div>
-        <div class="mockup" aria-label="Podgląd aplikacji">
-          <h3>Panel wspinacza</h3>
-          <div class="mock-card"><strong>Dzisiaj</strong><br>Zaproszenia, treningi i aktywne wyzwania.</div>
-          <div class="mock-card"><strong>Postęp</strong><br>Najlepsze wyceny, projekty i cele.</div>
-          <div class="mock-card"><strong>Szybko dodaj</strong><br>Droga, sesja, projekt albo trening.</div>
+        <div class="mockup" aria-label="App preview">
+          <h3>Climber panel</h3>
+          <div class="mock-card"><strong>Today</strong><br>Invitations, trainings and active challenges.</div>
+          <div class="mock-card"><strong>Progress</strong><br>Best grades, projects and goals.</div>
+          <div class="mock-card"><strong>Quick add</strong><br>Route, session, project or training.</div>
         </div>
       </div>
     </section>
 
     <section class="section" id="sections">
-      <h2>Dla sekcji i trenerów</h2>
-      <p>Climbing Diary może służyć jako proste narzędzie dla grup wspinaczkowych: trener widzi zawodników, grupy, wyzwania i może łatwiej zadawać cele treningowe.</p>
+      <h2>For climbing groups and coaches</h2>
+      <p>Climbing Diary can work as a lightweight tool for climbing sections: coaches can use friends, groups, challenges and training goals to keep athletes engaged.</p>
       <div class="grid">
         <article class="card">
-          <h3>Grupy znajomych</h3>
-          <p>Tworzenie grup, szybkie zapraszanie kilku osób i wygodniejsza praca z sekcją.</p>
+          <h3>Friend groups</h3>
+          <p>Create groups, invite several people faster and organize a climbing section more easily.</p>
         </article>
         <article class="card">
-          <h3>Wyzwania</h3>
-          <p>Cel liczbowy, minimalna wycena, zakres wycen i daty. Wyzwania wygasają i trafiają do archiwum.</p>
+          <h3>Challenges</h3>
+          <p>Set route count, minimum grade, grade range and dates. Challenges expire and move to archive.</p>
         </article>
         <article class="card">
-          <h3>Testy sportowe</h3>
-          <p>Profil fizyczny, historia testów i przypomnienie, aby powtarzać testy co 3-4 miesiące.</p>
+          <h3>Sport tests</h3>
+          <p>Physical profile, test history and a reminder to repeat tests every 3-4 months.</p>
         </article>
       </div>
     </section>
@@ -333,57 +333,57 @@
     <section class="section" id="download">
       <div class="card blue">
         <h2>Google Play</h2>
-        <p>Aplikacja jest obecnie przygotowywana do testów i publikacji. Po udostępnieniu w Google Play ten przycisk będzie prowadził bezpośrednio do sklepu.</p>
+        <p>The app is currently being prepared for testing and publication. Once it is available on Google Play, this button will link directly to the store listing.</p>
         <div class="actions">
-          <a class="button blue" href="#" aria-disabled="true">Google Play - wkrótce</a>
-          <a class="button secondary" href="mailto:climbingdiaryapp@gmail.com?subject=Climbing%20Diary%20-%20testy">Kontakt w sprawie testów</a>
+          <a class="button blue" href="#" aria-disabled="true">Google Play - coming soon</a>
+          <a class="button secondary" href="mailto:climbingdiaryapp@gmail.com?subject=Climbing%20Diary%20testing">Contact about testing</a>
         </div>
       </div>
     </section>
 
     <section class="section" id="support">
-      <h2>Pomoc i zgłaszanie błędów</h2>
-      <p>Jeśli testujesz aplikację, opisz problem, model telefonu i kroki prowadzące do błędu. Najlepiej dołącz zrzut ekranu.</p>
+      <h2>Support and bug reports</h2>
+      <p>If you test the app, describe the issue, phone model and steps that caused it. A screenshot is very helpful.</p>
       <div class="card">
-        <h3>Zgłoś błąd</h3>
-        <p>Na etapie testów najprostsza ścieżka to e-mail z opisem błędu.</p>
+        <h3>Report a bug</h3>
+        <p>During testing, the simplest path is an email report with a clear description.</p>
         <div class="actions">
-          <a class="button blue" href="mailto:climbingdiaryapp@gmail.com?subject=Zg%C5%82oszenie%20b%C5%82%C4%99du%20Climbing%20Diary">Wyślij zgłoszenie</a>
+          <a class="button blue" href="mailto:climbingdiaryapp@gmail.com?subject=Climbing%20Diary%20bug%20report">Send report</a>
         </div>
       </div>
     </section>
 
     <section class="section" id="testers">
-      <h2>Informacje dla testerów</h2>
-      <p>Wersja testowa służy do sprawdzenia codziennego zapisu wspinania, synchronizacji, znajomych, wyzwań, treningów i analiz. Zgłaszając błąd, najlepiej podaj model telefonu, wersję Androida, e-mail konta testowego i kroki prowadzące do problemu.</p>
+      <h2>Information for testers</h2>
+      <p>The test version is meant to verify daily logging, sync, friends, challenges, trainings and analytics. When reporting an issue, include phone model, Android version, test account email and reproduction steps if possible.</p>
       <div class="grid">
         <article class="card">
-          <h3>Co testować?</h3>
-          <p>Dodawanie dróg, projekty, edycję wpisów, sesje, eksport, wyszukiwanie znajomych, grupy, wyzwania i zaproszenia na trening.</p>
+          <h3>What to test?</h3>
+          <p>Adding climbs, projects, entry editing, sessions, export, friend search, groups, challenges and training invitations.</p>
         </article>
         <article class="card blue">
-          <h3>Gdzie szukać pomocy?</h3>
-          <p>W aplikacji otwórz Profil → Pomoc. Tam znajdziesz skrócony manual, zgłaszanie błędów i link do strony WWW.</p>
+          <h3>Where to find help?</h3>
+          <p>In the app, open Profile - Help. It contains a short manual, bug reporting and a link to the website.</p>
         </article>
         <article class="card amber">
-          <h3>Prywatność</h3>
-          <p>Polityka prywatności jest dostępna publicznie: <a href="privacy-policy.html">privacy-policy.html</a>.</p>
+          <h3>Privacy</h3>
+          <p>The privacy policy is public: <a href="privacy-policy.html">privacy-policy.html</a>.</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="delete">
-      <h2>Usunięcie konta i danych</h2>
-      <p>Konto możesz usunąć bezpośrednio w aplikacji: Profil → Dane i prywatność → Usuń konto i dane w chmurze. Jeśli nie masz dostępu do aplikacji, wyślij prośbę e-mailem.</p>
+      <h2>Account and data deletion</h2>
+      <p>You can delete your account directly in the app: Profile - Data and privacy - Delete account and cloud data. If you cannot access the app, send a request by email.</p>
       <div class="card red">
-        <h3>Co zostanie usunięte?</h3>
+        <h3>What will be deleted?</h3>
         <ul>
-          <li>konto logowania i profil użytkownika,</li>
-          <li>zsynchronizowane dane w Firebase,</li>
-          <li>dane powiązane z dziennikiem, znajomymi i grupami.</li>
+          <li>login account and user profile,</li>
+          <li>synchronized Firebase data,</li>
+          <li>data related to the logbook, friends and groups.</li>
         </ul>
         <div class="actions">
-          <a class="button red" href="mailto:climbingdiaryapp@gmail.com?subject=Pro%C5%9Bba%20o%20usuni%C4%99cie%20konta%20Climbing%20Diary">Poproś o usunięcie konta</a>
+          <a class="button red" href="mailto:climbingdiaryapp@gmail.com?subject=Climbing%20Diary%20account%20deletion%20request">Request account deletion</a>
         </div>
       </div>
     </section>
@@ -392,10 +392,9 @@
   <footer>
     <div class="footer-inner">
       <span>Climbing Diary</span>
-      <span>Kontakt: <a href="mailto:climbingdiaryapp@gmail.com">climbingdiaryapp@gmail.com</a></span>
-      <span><a href="privacy-policy.html">Polityka prywatności</a></span>
-      <span><a href="#delete">Usunięcie konta</a></span>
-      <span><a href="en/">English version</a></span>
+      <span>Contact: <a href="mailto:climbingdiaryapp@gmail.com">climbingdiaryapp@gmail.com</a></span>
+      <span><a href="privacy-policy.html">Privacy policy</a></span>
+      <span><a href="../">Polska wersja</a></span>
     </div>
   </footer>
 </body>
