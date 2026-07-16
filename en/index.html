@@ -216,6 +216,43 @@
       font-size: 28px;
       color: var(--green-dark);
     }
+    .manual-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .manual-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--stroke);
+      color: var(--muted);
+    }
+    .manual-list li:last-child { border-bottom: 0; }
+    .manual-list strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    details {
+      background: var(--surface);
+      border: 1px solid var(--stroke);
+      border-left: 8px solid var(--green);
+      border-radius: 16px;
+      padding: 18px 22px;
+      box-shadow: var(--shadow);
+    }
+    details + details { margin-top: 12px; }
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--text);
+    }
+    details p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
     footer {
       margin-top: 64px;
       padding: 34px 0;
@@ -247,6 +284,8 @@
       </a>
       <div class="nav-links">
         <a href="#features">Features</a>
+        <a href="#manual">Manual</a>
+        <a href="#faq">FAQ</a>
         <a href="#sections">Teams</a>
         <a href="#support">Support</a>
         <a href="#testers">Testing</a>
@@ -291,6 +330,31 @@
       </div>
     </section>
 
+    <section class="section" id="manual">
+      <h2>Short app manual</h2>
+      <p>The main screens are organized so a climber can quickly add activity, check progress and manage social features.</p>
+      <div class="split">
+        <article class="card">
+          <h3>Main screens</h3>
+          <ul class="manual-list">
+            <li><strong>Add route</strong>Log a sport route, boulder, gym climb or outdoor climb. You can add grade, style, date, place, GPS, notes and an optional local attachment.</li>
+            <li><strong>Diary</strong>Entry list, editing, deleting, filtering, CSV/XLSX import and data export.</li>
+            <li><strong>Analytics</strong>Grade distribution, rock/gym split, progress trend, pyramid and goal recommendations.</li>
+            <li><strong>Projects</strong>Routes marked as projects. They are not counted as completed until you mark them as done.</li>
+          </ul>
+        </article>
+        <article class="card blue">
+          <h3>Community and profile</h3>
+          <ul class="manual-list">
+            <li><strong>Sessions</strong>Quickly log attempts and sends from one place without re-entering date and location.</li>
+            <li><strong>Challenges</strong>Create goals for yourself, friends or groups. Expired challenges move to archive.</li>
+            <li><strong>Profile</strong>Account, friends, groups, language/theme settings, sport tests, privacy, Premium and help.</li>
+            <li><strong>Calendar</strong>A combined view of routes, sessions, tests, trainings and challenges.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section class="section">
       <div class="split">
         <div>
@@ -328,6 +392,31 @@
           <p>Physical profile, test history and a reminder to repeat tests every 3-4 months.</p>
         </article>
       </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>FAQ</h2>
+      <p>The most common questions are about local storage, Firebase sync, Premium and data deletion.</p>
+      <details>
+        <summary>Does the app work without internet?</summary>
+        <p>Yes. Routes can be saved locally on the phone. If the user has Trial Premium or Premium, offline changes are sent to Firebase when the connection returns.</p>
+      </details>
+      <details>
+        <summary>What happens if I delete a route offline?</summary>
+        <p>Deleting a single route in the app is stored locally as a pending change. When internet returns, the app should synchronize that deletion to Firebase so the route does not come back from the cloud.</p>
+      </details>
+      <details>
+        <summary>Will Firebase restore data after clearing the phone?</summary>
+        <p>If the user clears app data or reinstalls the app, the local database and local pending-change queue are removed. After signing in again with active Trial Premium/Premium, the app can download data that was previously stored in Firebase.</p>
+      </details>
+      <details>
+        <summary>What is the difference between local deletion and account deletion?</summary>
+        <p>Clearing local data removes data only from the phone. Deleting the account and cloud data removes the profile and synchronized Firebase data. This option is available in the app under Profile → Data and privacy.</p>
+      </details>
+      <details>
+        <summary>What does Premium include?</summary>
+        <p>Premium unlocks Firebase sync, friends, groups, challenges, training invitations, coach/team tools, export and advanced features. The first app launch starts a 7-day Trial Premium.</p>
+      </details>
     </section>
 
     <section class="section" id="download">

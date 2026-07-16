@@ -215,6 +215,43 @@
       font-size: 28px;
       color: var(--green-dark);
     }
+    .manual-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .manual-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--stroke);
+      color: var(--muted);
+    }
+    .manual-list li:last-child { border-bottom: 0; }
+    .manual-list strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    details {
+      background: var(--surface);
+      border: 1px solid var(--stroke);
+      border-left: 8px solid var(--green);
+      border-radius: 16px;
+      padding: 18px 22px;
+      box-shadow: var(--shadow);
+    }
+    details + details { margin-top: 12px; }
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--text);
+    }
+    details p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
     footer {
       margin-top: 64px;
       padding: 34px 0;
@@ -246,6 +283,8 @@
       </a>
       <div class="nav-links">
         <a href="#features">Funkcje</a>
+        <a href="#manual">Manual</a>
+        <a href="#faq">FAQ</a>
         <a href="#sections">Sekcje i trenerzy</a>
         <a href="#support">Pomoc</a>
         <a href="#testers">Testy</a>
@@ -291,6 +330,31 @@
       </div>
     </section>
 
+    <section class="section" id="manual">
+      <h2>Krótki manual aplikacji</h2>
+      <p>Najważniejsze ekrany są ułożone tak, aby użytkownik mógł szybko dodać aktywność, sprawdzić postęp i zarządzać funkcjami społecznościowymi.</p>
+      <div class="split">
+        <article class="card">
+          <h3>Główne ekrany</h3>
+          <ul class="manual-list">
+            <li><strong>Dodaj drogę</strong>Zapis drogi sportowej, bulderu, panelu albo skał. Możesz dodać wycenę, styl, datę, miejsce, GPS, notatki i opcjonalny załącznik lokalny.</li>
+            <li><strong>Dziennik</strong>Lista wpisów, edycja, usuwanie, filtrowanie, import CSV/XLSX oraz eksport danych.</li>
+            <li><strong>Analizy</strong>Rozkład wycen, skały/panel, trend progresu, piramida przejść i rekomendacje pod cel.</li>
+            <li><strong>Projekty</strong>Drogi oznaczone jako projekt. Nie są liczone jako ukończone, dopóki nie zmienisz ich statusu na zrobione.</li>
+          </ul>
+        </article>
+        <article class="card blue">
+          <h3>Społeczność i profil</h3>
+          <ul class="manual-list">
+            <li><strong>Sesje</strong>Szybki zapis prób i przejść z jednego miejsca bez ponownego wpisywania daty oraz lokalizacji.</li>
+            <li><strong>Wyzwania</strong>Tworzenie celów dla siebie, znajomych albo grup. Wyzwania po terminie trafiają do archiwum.</li>
+            <li><strong>Profil</strong>Konto, znajomi, grupy, ustawienia języka/motywu, testy sportowe, prywatność, Premium i pomoc.</li>
+            <li><strong>Kalendarz</strong>Wspólny widok dróg, sesji, testów, treningów i wyzwań.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section class="section">
       <div class="split">
         <div>
@@ -328,6 +392,31 @@
           <p>Profil fizyczny, historia testów i przypomnienie, aby powtarzać testy co 3-4 miesiące.</p>
         </article>
       </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>FAQ</h2>
+      <p>Najczęstsze pytania dotyczą zapisu lokalnego, synchronizacji Firebase, Premium i usuwania danych.</p>
+      <details>
+        <summary>Czy aplikacja działa bez internetu?</summary>
+        <p>Tak. Drogi można zapisywać lokalnie w telefonie. Jeśli użytkownik ma Trial Premium albo Premium, zmiany zapisane bez internetu zostaną wysłane do Firebase po odzyskaniu połączenia.</p>
+      </details>
+      <details>
+        <summary>Co się stanie, jeśli usunę drogę bez internetu?</summary>
+        <p>Usunięcie pojedynczej drogi w aplikacji jest zapisywane lokalnie jako zmiana oczekująca. Po powrocie internetu aplikacja powinna zsynchronizować usunięcie z Firebase, aby droga nie wróciła z chmury.</p>
+      </details>
+      <details>
+        <summary>Czy dane z Firebase odtworzą się po wyczyszczeniu telefonu?</summary>
+        <p>Jeśli użytkownik wyczyści dane lokalne aplikacji albo zainstaluje ją ponownie, lokalna baza i lokalna kolejka zmian znikają. Po ponownym zalogowaniu i przy aktywnym Trial Premium/Premium aplikacja może pobrać dane zapisane wcześniej w Firebase.</p>
+      </details>
+      <details>
+        <summary>Jaka jest różnica między usunięciem lokalnym a usunięciem konta?</summary>
+        <p>Wyczyszczenie danych lokalnych usuwa dane tylko z telefonu. Usunięcie konta i danych w chmurze usuwa profil oraz zsynchronizowane dane Firebase. Ta opcja jest dostępna w aplikacji w Profil → Dane i prywatność.</p>
+      </details>
+      <details>
+        <summary>Co daje Premium?</summary>
+        <p>Premium odblokowuje synchronizację Firebase, znajomych, grupy, wyzwania, zaproszenia na trening, narzędzia sekcji/trenera, eksport i zaawansowane funkcje. Pierwsze uruchomienie aplikacji daje 7 dni Trial Premium.</p>
+      </details>
     </section>
 
     <section class="section" id="download">
