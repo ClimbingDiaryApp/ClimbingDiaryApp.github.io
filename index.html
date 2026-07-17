@@ -366,11 +366,12 @@
     <section class="section">
       <div class="split">
         <div>
-          <h2>Free Local, Trial i Premium</h2>
-          <p>Tryb lokalny pozwala prowadzić własny dziennik bez synchronizacji. Pierwsze uruchomienie daje 7 dni Trial Premium, a subskrypcja Premium odblokowuje Firebase, znajomych, wyzwania, grupy i synchronizację między urządzeniami.</p>
+          <h2>Trial, Local Pro i Premium</h2>
+          <p>Pierwsze uruchomienie daje 7 dni Trial Premium. Po okresie próbnym użytkownik wybiera Lifetime Local Pro do pracy lokalnej albo subskrypcję Premium dla chmury, znajomych, wyzwań, grup i synchronizacji między urządzeniami.</p>
           <div class="metric-row">
             <div class="metric"><strong>4</strong><span>typy aktywności</span></div>
             <div class="metric"><strong>7 dni</strong><span>Trial Premium</span></div>
+            <div class="metric"><strong>Local Pro</strong><span>jednorazowo lokalnie</span></div>
             <div class="metric"><strong>Premium</strong><span>chmura i wyzwania</span></div>
           </div>
         </div>
@@ -385,32 +386,32 @@
 
     <section class="section" id="plans">
       <h2>Plany i przechowywanie danych</h2>
-      <p>Model aplikacji jest prosty: możesz prowadzić dziennik lokalnie, wypróbować funkcje chmurowe przez 7 dni, a później zdecydować, czy potrzebujesz Premium.</p>
+      <p>Model aplikacji jest prosty: przez 7 dni testujesz pełny Premium, a później wybierasz lokalny zakup jednorazowy albo subskrypcję z funkcjami chmurowymi.</p>
       <div class="card blue">
         <h3>Plan publikacji Premium</h3>
-        <p>Na start zakładamy trzy ścieżki: Free Local, 7-dniowy Trial Premium oraz Premium miesięczne lub roczne przez Google Play. Ceny, płatności, odnowienia i anulowanie subskrypcji będą obsługiwane przez Google Play.</p>
+        <p>Na start zakładamy trzy etapy: 7-dniowy Trial Premium, Lifetime Local Pro jako zakup jednorazowy oraz Premium miesięczne lub roczne przez Google Play. Ceny, płatności, odnowienia i anulowanie subskrypcji będą obsługiwane przez Google Play.</p>
       </div>
       <div class="grid">
-        <article class="card">
-          <h3>Free Local</h3>
-          <p>Dziennik, projekty, sesje i podstawowe analizy działają na telefonie. Dane nie są wysyłane do Firebase, a znajomi, wyzwania, grupy i tryb trenera są wyłączone.</p>
-        </article>
         <article class="card">
           <h3>Trial Premium</h3>
           <p>Pierwsze uruchomienie daje 7 dni funkcji chmurowych: synchronizacja Firebase, znajomi, grupy, wyzwania, treningi i tryb sekcja/trener.</p>
         </article>
+        <article class="card">
+          <h3>Lifetime Local Pro</h3>
+          <p>Jednorazowy zakup do pracy lokalnej: dziennik, projekty, sesje, eksport i zaawansowane analizy lokalne. Bez Firebase, znajomych, grup i wyzwań.</p>
+        </article>
         <article class="card blue">
           <h3>Premium</h3>
-          <p>Docelowo subskrypcja miesięczna lub roczna przez Google Play. Premium utrzymuje chmurę, synchronizację, funkcje społecznościowe, eksport i zaawansowane analizy.</p>
+          <p>Subskrypcja miesięczna lub roczna przez Google Play. Premium utrzymuje chmurę, synchronizację, funkcje społecznościowe, eksport i zaawansowane analizy.</p>
         </article>
       </div>
       <div class="card amber">
-        <h3>Co po zakończeniu Premium?</h3>
-        <p>Dane lokalne zostają na telefonie. Dane zsynchronizowane w Firebase mogą być przechowywane do 12 miesięcy po wygaśnięciu Premium, aby użytkownik mógł odnowić subskrypcję albo wyeksportować dane. Po tym czasie dane chmurowe mogą zostać usunięte.</p>
+        <h3>Co po zakończeniu trialu albo Premium?</h3>
+        <p>Po trialu aplikacja wymaga wyboru Lifetime Local Pro albo Premium. Dane lokalne zostają na telefonie. Dane zsynchronizowane w Firebase mogą być przechowywane do 12 miesięcy po wygaśnięciu Premium, aby użytkownik mógł odnowić subskrypcję albo wyeksportować dane. Po tym czasie dane chmurowe mogą zostać usunięte.</p>
       </div>
       <div class="card blue">
         <h3>Jak działa płatność?</h3>
-        <p>Zakup i odnawianie Premium będą obsługiwane przez Google Play. Subskrypcję będzie można anulować w ustawieniach konta Google Play. Anulowanie blokuje funkcje chmurowe po zakończeniu opłaconego okresu, ale lokalny dziennik pozostaje na telefonie.</p>
+        <p>Lifetime Local Pro i Premium będą obsługiwane przez Google Play. Local Pro jest zakupem jednorazowym dla funkcji lokalnych. Subskrypcję Premium będzie można anulować w ustawieniach konta Google Play. Anulowanie blokuje funkcje chmurowe po zakończeniu opłaconego okresu, ale nie usuwa danych lokalnych zapisanych na telefonie.</p>
       </div>
     </section>
 
@@ -438,7 +439,7 @@
       <p>Najczęstsze pytania dotyczą zapisu lokalnego, synchronizacji Firebase, Premium i usuwania danych.</p>
       <details>
         <summary>Czy aplikacja działa bez internetu?</summary>
-        <p>Tak. Drogi można zapisywać lokalnie w telefonie. Jeśli użytkownik ma Trial Premium albo Premium, zmiany zapisane bez internetu zostaną wysłane do Firebase po odzyskaniu połączenia.</p>
+        <p>Tak. W Trial Premium, Local Pro i Premium drogi można zapisywać lokalnie w telefonie. Jeśli użytkownik ma Trial Premium albo Premium, zmiany zapisane bez internetu zostaną wysłane do Firebase po odzyskaniu połączenia.</p>
       </details>
       <details>
         <summary>Co się stanie, jeśli usunę drogę bez internetu?</summary>
@@ -446,19 +447,19 @@
       </details>
       <details>
         <summary>Czy dane z Firebase odtworzą się po wyczyszczeniu telefonu?</summary>
-        <p>Jeśli użytkownik wyczyści dane lokalne aplikacji albo zainstaluje ją ponownie, lokalna baza i lokalna kolejka zmian znikają. Po ponownym zalogowaniu i przy aktywnym Trial Premium/Premium aplikacja może pobrać dane zapisane wcześniej w Firebase.</p>
+        <p>Jeśli użytkownik wyczyści dane lokalne aplikacji albo zainstaluje ją ponownie, lokalna baza i lokalna kolejka zmian znikają. Po ponownym zalogowaniu i przy aktywnym Trial Premium lub Premium aplikacja może pobrać dane zapisane wcześniej w Firebase. Local Pro działa lokalnie, więc bez Premium nie odtwarza danych z chmury.</p>
       </details>
       <details>
         <summary>Jaka jest różnica między usunięciem lokalnym a usunięciem konta?</summary>
         <p>Wyczyszczenie danych lokalnych usuwa dane tylko z telefonu. Usunięcie konta i danych w chmurze usuwa profil oraz zsynchronizowane dane Firebase. Ta opcja jest dostępna w aplikacji w Profil → Dane i prywatność.</p>
       </details>
       <details>
-        <summary>Co daje Premium?</summary>
-        <p>Premium odblokowuje synchronizację Firebase, znajomych, grupy, wyzwania, zaproszenia na trening, narzędzia sekcji/trenera, eksport i zaawansowane funkcje. Pierwsze uruchomienie aplikacji daje 7 dni Trial Premium.</p>
+        <summary>Co daje Local Pro, a co Premium?</summary>
+        <p>Lifetime Local Pro odblokowuje lokalny dziennik, projekty, sesje, eksport i zaawansowane analizy bez reklam. Premium zawiera to samo oraz synchronizację Firebase, znajomych, grupy, wyzwania, zaproszenia na trening i narzędzia sekcji/trenera. Pierwsze uruchomienie aplikacji daje 7 dni Trial Premium.</p>
       </details>
       <details>
         <summary>Czy Premium będzie subskrypcją?</summary>
-        <p>Tak. Funkcje chmurowe generują stałe koszty utrzymania, dlatego Premium ma działać jako subskrypcja miesięczna lub roczna w Google Play. W aplikacji pozostanie tryb Free Local, czyli lokalny dziennik bez synchronizacji w chmurze.</p>
+        <p>Tak. Funkcje chmurowe generują stałe koszty utrzymania, dlatego Premium działa jako subskrypcja miesięczna lub roczna w Google Play. Dla osób, które nie potrzebują chmury, przewidziany jest Lifetime Local Pro jako jednorazowy zakup lokalny.</p>
       </details>
     </section>
 
