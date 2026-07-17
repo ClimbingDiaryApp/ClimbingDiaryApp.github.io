@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Climbing Diary - Klettertagebuch App</title>
+  <meta name="description" content="Climbing Diary ist eine Android-App zum Speichern von Routen, Boulderproblemen, Projekten, Sessions, Challenges, Trainings und Kletterfortschritt.">
+  <link rel="canonical" href="https://climbingdiaryapp.github.io/de/">
+  <style>
+    :root { --bg:#f4f6f1; --surface:#fff; --soft:#e7efea; --text:#1c211f; --muted:#5f6b66; --green:#2f6758; --amber:#b8682c; --blue:#3f6c8f; --red:#7a2e2e; --stroke:#d9dfd8; --shadow:0 18px 40px rgba(28,33,31,.12); }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+    a { color:inherit; }
+    nav { position:sticky; top:0; z-index:10; background:rgba(244,246,241,.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--stroke); }
+    .nav-inner, main, footer { width:min(1120px, calc(100% - 32px)); margin:0 auto; }
+    .nav-inner { min-height:70px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:800; }
+    .brand img { width:44px; height:44px; border-radius:12px; box-shadow:0 8px 18px rgba(47,103,88,.2); }
+    .nav-links { display:flex; flex-wrap:wrap; align-items:center; gap:14px; font-size:14px; color:var(--muted); }
+    .nav-links a { text-decoration:none; }
+    .hero { min-height:78vh; display:grid; align-items:end; background:linear-gradient(90deg, rgba(28,33,31,.84), rgba(28,33,31,.48), rgba(28,33,31,.14)), url("../assets/background_image.png") center/cover no-repeat; }
+    .hero-inner { width:min(1120px, calc(100% - 32px)); margin:0 auto; padding:96px 0 56px; color:#fff; }
+    .eyebrow { display:inline-flex; padding:8px 12px; border-radius:999px; background:rgba(231,239,234,.14); border:1px solid rgba(255,255,255,.26); font-weight:800; font-size:13px; }
+    h1 { margin:18px 0 12px; max-width:780px; font-size:clamp(42px,8vw,82px); line-height:.95; }
+    .hero p { max-width:650px; margin:0 0 24px; color:rgba(255,255,255,.86); font-size:19px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; border-radius:12px; padding:12px 18px; text-decoration:none; font-weight:800; background:var(--green); color:#fff; box-shadow:0 14px 28px rgba(47,103,88,.24); }
+    .button.secondary { background:#fff; color:#244c42; }
+    .button.blue { background:var(--blue); }
+    .button.red { background:var(--red); }
+    section { padding:64px 0 0; }
+    h2 { margin:0 0 12px; font-size:clamp(28px,4vw,44px); line-height:1.05; }
+    section > p { max-width:760px; color:var(--muted); font-size:17px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { background:var(--surface); border:1px solid var(--stroke); border-left:8px solid var(--green); border-radius:16px; padding:22px; box-shadow:var(--shadow); }
+    .card.amber { border-left-color:var(--amber); } .card.blue { border-left-color:var(--blue); } .card.red { border-left-color:var(--red); }
+    .card h3 { margin:0 0 8px; font-size:20px; }
+    .card p, .card li { color:var(--muted); }
+    .pill { display:inline-flex; margin-bottom:12px; padding:7px 10px; border-radius:999px; background:var(--soft); color:#244c42; font-size:13px; font-weight:800; }
+    footer { padding:42px 0 56px; color:var(--muted); }
+    footer .links { display:flex; flex-wrap:wrap; gap:14px; }
+    @media (max-width:800px) { .grid { grid-template-columns:1fr; } .hero { min-height:72vh; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Climbing Diary"><img src="../assets/app_icon.webp" alt=""><span>Climbing Diary</span></a>
+      <div class="nav-links">
+        <a href="#features">Funktionen</a>
+        <a href="#manual">Kurzanleitung</a>
+        <a href="#plans">Pl&auml;ne</a>
+        <a href="#faq">FAQ</a>
+        <a href="#support">Hilfe</a>
+        <a href="privacy-policy.html">Datenschutz</a>
+        <a href="../">PL</a>
+        <a href="../en/">EN</a>
+        <a href="../es/">ES</a>
+      </div>
+    </div>
+  </nav>
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <span class="eyebrow">Android App f&uuml;r Kletterinnen und Kletterer</span>
+      <h1>Ein Tagebuch f&uuml;r Routen, Projekte und Fortschritt.</h1>
+      <p>Speichere Kletterrouten, Boulder, Sessions und Projekte. Analysiere deinen Fortschritt, erstelle Challenges und plane Training mit Freunden oder einer Klettergruppe.</p>
+      <div class="actions">
+        <a class="button" href="#download">Google Play</a>
+        <a class="button secondary" href="#features">Funktionen ansehen</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="features">
+      <h2>Was die App macht</h2>
+      <p>Climbing Diary verbindet ein lokales Klettertagebuch mit Premium-Funktionen f&uuml;r Cloud-Synchronisation, Freunde, Gruppen und Challenges.</p>
+      <div class="grid">
+        <article class="card"><span class="pill">Tagebuch</span><h3>Routen und Boulder</h3><p>Speichere Grad, Stil, Datum, Ort, GPS, Notizen, Projekte und Versuche.</p></article>
+        <article class="card amber"><span class="pill">Analyse</span><h3>Fortschritt verstehen</h3><p>Sieh Verteilung der Grade, Monatsvolumen, Onsight/Flash/RP, Projekte und Zielpyramide.</p></article>
+        <article class="card blue"><span class="pill">Premium</span><h3>Freunde und Challenges</h3><p>Lade Freunde ein, nutze Gruppen, Trainingsverabredungen und Challenges mit Fortschritt.</p></article>
+      </div>
+    </section>
+    <section id="manual">
+      <h2>Kurzanleitung</h2>
+      <div class="grid">
+        <article class="card"><h3>1. Route speichern</h3><p>W&auml;hle Aktivitat, Grad, Stil, Datum und Ort. Projekte werden erst nach "erledigt" in Statistiken gez&auml;hlt.</p></article>
+        <article class="card"><h3>2. Fortschritt ansehen</h3><p>Die Analyse zeigt, welche Grade du oft kletterst und was f&uuml;r das n&auml;chste Ziel fehlt.</p></article>
+        <article class="card"><h3>3. Mit anderen klettern</h3><p>Premium aktiviert Freunde, Gruppen, Challenges und geplante Trainings.</p></article>
+      </div>
+    </section>
+    <section id="plans">
+      <h2>Pl&auml;ne</h2>
+      <div class="grid">
+        <article class="card"><h3>Free Local</h3><p>Lokales Tagebuch, Basisanalysen und Daten nur auf dem Telefon.</p></article>
+        <article class="card blue"><h3>Trial Premium</h3><p>7 Tage zum Testen von Cloud-Sync, Freunden, Gruppen, Challenges und Trainings.</p></article>
+        <article class="card amber"><h3>Premium</h3><p>Monatliches oder j&auml;hrliches Abo mit Cloud-Funktionen, Export und ohne Werbung.</p></article>
+      </div>
+    </section>
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="grid">
+        <article class="card"><h3>Was passiert offline?</h3><p>Eintr&auml;ge werden lokal gespeichert. Premium synchronisiert sie sp&auml;ter mit Firebase, wenn Internet verf&uuml;gbar ist.</p></article>
+        <article class="card"><h3>Warum Premium?</h3><p>Cloud-Sync, Freunde, Gruppen, Trainings und Challenges erzeugen laufende Serverkosten.</p></article>
+        <article class="card"><h3>Kann ich Daten l&ouml;schen?</h3><p>Ja. In der App gibt es eine Funktion zum L&ouml;schen von Konto und Cloud-Daten.</p></article>
+      </div>
+    </section>
+    <section id="support">
+      <h2>Hilfe und Kontakt</h2>
+      <div class="grid">
+        <article class="card blue"><h3>Fehler melden</h3><p>Beschreibe Telefonmodell, Schritte zum Problem und f&uuml;ge wenn m&ouml;glich einen Screenshot hinzu.</p><p><a class="button blue" href="mailto:climbingdiaryapp@gmail.com?subject=Climbing%20Diary%20Fehlerbericht">Fehler senden</a></p></article>
+        <article class="card red"><h3>Konto l&ouml;schen</h3><p>Wenn du keinen Zugriff auf die App hast, kannst du die L&ouml;schung per E-Mail anfordern.</p><p><a class="button red" href="mailto:climbingdiaryapp@gmail.com?subject=Climbing%20Diary%20Konto%20loeschen">L&ouml;schung anfordern</a></p></article>
+        <article class="card"><h3>Datenschutz</h3><p>Die Datenschutzerkl&auml;rung beschreibt App-Modi, Berechtigungen, Firebase und Datenaufbewahrung.</p><p><a href="privacy-policy.html">Datenschutz lesen</a></p></article>
+      </div>
+    </section>
+    <section id="download">
+      <h2>Google Play</h2>
+      <p>Die App ist noch in Vorbereitung f&uuml;r Google Play. Bis dahin wird sie als Testversion verteilt.</p>
+      <a class="button blue" href="#" aria-disabled="true">Google Play - bald</a>
+    </section>
+  </main>
+  <footer>
+    <div class="links">
+      <span>Kontakt: <a href="mailto:climbingdiaryapp@gmail.com">climbingdiaryapp@gmail.com</a></span>
+      <span><a href="privacy-policy.html">Datenschutz</a></span>
+      <span><a href="../">Polski</a></span>
+      <span><a href="../en/">English</a></span>
+      <span><a href="../es/">Espa&ntilde;ol</a></span>
+    </div>
+  </footer>
+</body>
+</html>
