@@ -3,95 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Climbing Diary - Polityka prywatności</title>
+  <title>Polityka prywatności — Climbing Diary</title>
+  <meta name="description" content="Polityka prywatności aplikacji Climbing Diary: przetwarzane dane, uprawnienia, Firebase, Google Play, przechowywanie i usuwanie konta.">
+  <meta name="theme-color" content="#173f36">
   <link rel="canonical" href="https://climbingdiaryapp.github.io/privacy-policy.html">
-  <style>
-    :root {
-      --bg: #f4f6f1;
-      --surface: #ffffff;
-      --text: #1c211f;
-      --muted: #5f6b66;
-      --green: #2f6758;
-      --blue: #3f6c8f;
-      --red: #7a2e2e;
-      --stroke: #d9dfd8;
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-    main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 44px 0 56px; }
-    header, section { background: var(--surface); border: 1px solid var(--stroke); border-left: 8px solid var(--green); border-radius: 16px; padding: 24px; margin: 0 0 16px; }
-    h1, h2 { margin-top: 0; }
-    h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.05; }
-    h2 { color: var(--green); }
-    p, li { color: var(--muted); }
-    a { color: var(--blue); font-weight: 700; }
-    .note { border-left-color: var(--blue); }
-    .danger { border-left-color: var(--red); }
-  </style>
+  <link rel="alternate" hreflang="pl" href="https://climbingdiaryapp.github.io/privacy-policy.html">
+  <link rel="alternate" hreflang="en" href="https://climbingdiaryapp.github.io/en/privacy-policy.html">
+  <link rel="alternate" hreflang="de" href="https://climbingdiaryapp.github.io/de/privacy-policy.html">
+  <link rel="alternate" hreflang="es" href="https://climbingdiaryapp.github.io/es/privacy-policy.html">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<main>
-  <header>
-    <h1>Polityka prywatności Climbing Diary</h1>
-    <p>Ostatnia aktualizacja: 16 lipca 2026.</p>
-    <p>Kontakt w sprawach prywatności i danych: <a href="mailto:climbingdiaryapp@gmail.com">climbingdiaryapp@gmail.com</a>.</p>
-    <p><a href="en/privacy-policy.html">English version</a> | <a href="de/privacy-policy.html">Deutsch</a> | <a href="es/privacy-policy.html">Español</a></p>
+  <a class="skip-link" href="#policy">Przejdź do polityki</a>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="wordmark" href="/"><span class="wordmark-mark" aria-hidden="true"></span><span>Climbing Diary</span></a>
+      <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" data-nav-toggle><span></span></button>
+      <nav class="nav-links" aria-label="Nawigacja" data-nav-links><a href="/">Strona główna</a><a href="delete-account.html">Usuń konto</a><a href="terms.html">Warunki</a><div class="language-links"><a href="/privacy-policy.html" aria-current="page">PL</a><a href="/en/privacy-policy.html">EN</a><a href="/de/privacy-policy.html">DE</a><a href="/es/privacy-policy.html">ES</a></div></nav>
+    </div>
   </header>
-  <section>
-    <h2>1. Zakres</h2>
-    <p>Ta polityka opisuje, jakie dane mogą być przetwarzane przez aplikację Climbing Diary na Androida oraz stronę pomocy aplikacji.</p>
-  </section>
-  <section>
-    <h2>2. Tryby aplikacji</h2>
-    <ul>
-      <li><strong>Trial Premium</strong>: 7-dniowy okres próbny umożliwia korzystanie z funkcji chmurowych, znajomych, grup, wyzwań i treningów.</li>
-      <li><strong>Lifetime Local Pro</strong>: jednorazowy zakup umożliwia korzystanie z lokalnego dziennika, projektów, sesji, eksportu i zaawansowanych analiz bez synchronizacji Firebase.</li>
-      <li><strong>Premium</strong>: aktywna subskrypcja umożliwia synchronizację danych z Firebase, aby działały znajomi, grupy, wyzwania, treningi i synchronizacja między urządzeniami.</li>
-    </ul>
-  </section>
-  <section>
-    <h2>3. Kategorie danych</h2>
-    <ul>
-      <li>Dane konta: adres e-mail, identyfikator użytkownika Firebase, opcjonalnie imię, nazwisko, nazwa profilu, numer telefonu i zdjęcie profilu.</li>
-      <li>Dane wspinaczkowe: drogi, buldery, projekty, próby, sesje, wyceny, style przejścia, daty, notatki, typ miejsca i opcjonalne współrzędne GPS.</li>
-      <li>Dane społecznościowe: znajomi, grupy znajomych, zaproszenia, wyzwania i umówione treningi.</li>
-      <li>Dane techniczne: diagnostyka awarii przez Firebase Crashlytics, np. informacje o błędzie, wersji aplikacji i urządzeniu.</li>
-    </ul>
-  </section>
-  <section>
-    <h2>4. Uprawnienia Androida</h2>
-    <ul>
-      <li><strong>Lokalizacja</strong>: używana tylko wtedy, gdy użytkownik wybierze dodanie aktualnej lokalizacji GPS do wpisu.</li>
-      <li><strong>Kontakty</strong>: używane tylko po wybraniu funkcji szukania znajomego z kontaktów telefonu. Aplikacja sprawdza, czy numer jest zarejestrowany w Firebase.</li>
-      <li><strong>Aparat i media</strong>: używane do zdjęcia profilu oraz lokalnych załączników do drogi lub projektu.</li>
-      <li><strong>Powiadomienia</strong>: używane do informacji o zaproszeniach, treningach, wyzwaniach i terminach.</li>
-    </ul>
-  </section>
-  <section>
-    <h2>5. Udostępnianie i widoczność</h2>
-    <p>Dane nie są sprzedawane. Dane mogą być przetwarzane przez dostawców technicznych niezbędnych do działania aplikacji, w szczególności Firebase Authentication, Cloud Firestore, Firebase Crashlytics i Firebase App Check.</p>
-    <p>W aplikacji można ustawić widoczność profilu: wyszukiwanie po e-mailu, wyszukiwanie po telefonie, widoczność telefonu dla znajomych i widoczność zdjęcia profilu.</p>
-  </section>
-  <section>
-    <h2>6. Przechowywanie danych</h2>
-    <p>Dane lokalne pozostają na urządzeniu do czasu ich usunięcia przez użytkownika albo odinstalowania aplikacji.</p>
-    <p>Dane chmurowe są dostępne w ramach Trial Premium lub aktywnego Premium. Po zakończeniu trialu użytkownik wybiera Lifetime Local Pro albo Premium. Dane lokalne pozostają na telefonie.</p>
-    <p>Dane zsynchronizowane w Firebase mogą być przechowywane przez okres do 12 miesięcy po wygaśnięciu Premium, aby umożliwić odnowienie subskrypcji lub eksport danych. Po tym czasie dane chmurowe mogą zostać usunięte, chyba że prawo wymaga dłuższego przechowywania wybranych informacji.</p>
-  </section>
-  <section>
-    <h2>7. Subskrypcje, zakupy i reklamy</h2>
-    <p>Lifetime Local Pro i Premium będą obsługiwane przez Google Play Billing. Subskrypcję można będzie anulować w ustawieniach konta Google Play. Anulowanie Premium może wyłączyć funkcje chmurowe, ale nie usuwa automatycznie danych lokalnych zapisanych na telefonie.</p>
-    <p>Na tym etapie aplikacja nie zakłada reklam. Funkcje chmurowe, znajomi, grupy, wyzwania i synchronizacja Firebase są dostępne wyłącznie w Trial Premium lub aktywnej subskrypcji Premium.</p>
-  </section>
-  <section class="danger">
-    <h2>8. Usunięcie konta i danych</h2>
-    <p>Konto można usunąć w aplikacji: Profil → Dane i prywatność → Usuń konto i dane w chmurze.</p>
-    <p>Jeśli nie masz dostępu do aplikacji, wyślij prośbę na <a href="mailto:climbingdiaryapp@gmail.com?subject=Pro%C5%9Bba%20o%20usuni%C4%99cie%20konta%20Climbing%20Diary">climbingdiaryapp@gmail.com</a>. W wiadomości podaj adres e-mail konta używany w aplikacji.</p>
-  </section>
-  <section class="note">
-    <h2>9. Strona pomocy</h2>
-    <p>Strona aplikacji, pomoc dla testerów i zgłaszanie błędów są dostępne pod adresem <a href="https://climbingdiaryapp.github.io/">https://climbingdiaryapp.github.io/</a>.</p>
-  </section>
-</main>
+  <main id="policy">
+    <section class="legal-hero"><div class="container"><p class="kicker">Dokument publiczny</p><h1>Polityka prywatności Climbing Diary</h1><p>Ostatnia aktualizacja: 18 lipca 2026 r. Dokument opisuje dane przetwarzane przez aplikację Android i stronę Climbing Diary.</p></div></section>
+    <div class="container legal-layout">
+      <aside class="legal-toc" aria-label="Spis treści"><strong>Spis treści</strong><a href="#administrator">Administrator i kontakt</a><a href="#modes">Tryby aplikacji</a><a href="#data">Kategorie danych</a><a href="#purposes">Cele i podstawy</a><a href="#permissions">Uprawnienia Androida</a><a href="#providers">Dostawcy</a><a href="#security">Bezpieczeństwo</a><a href="#retention">Przechowywanie</a><a href="#rights">Prawa użytkownika</a><a href="#deletion">Usuwanie konta</a><a href="#children">Osoby małoletnie</a><a href="#changes">Zmiany polityki</a></aside>
+      <article class="legal-content">
+        <section class="legal-section" id="administrator"><h2>1. Administrator i kontakt</h2><p>Administratorem danych przetwarzanych w związku z aplikacją jest wydawca aplikacji <strong>Climbing Diary</strong>, publikowanej z indywidualnego konta dewelopera Google Play.</p><p>Kontakt w sprawach prywatności, danych i realizacji praw: <a href="mailto:climbingdiaryapp@gmail.com">climbingdiaryapp@gmail.com</a>.</p><p>Polityka dotyczy aplikacji Climbing Diary na Androida, strony <a href="https://climbingdiaryapp.github.io/">climbingdiaryapp.github.io</a> oraz powiązanych usług pomocy.</p></section>
+        <section class="legal-section" id="modes"><h2>2. Tryby aplikacji</h2><h3>Trial Premium</h3><p>7-dniowy okres próbny udostępnia funkcje lokalne i chmurowe. Trial nie uruchamia automatycznej płatności; po jego zakończeniu wymagany jest zakup Lifetime Local Pro albo subskrypcja Premium.</p><h3>Lifetime Local Pro</h3><p>Jednorazowy zakup bez konta chmurowego. Dziennik, sesje, projekty, import, eksport i analizy działają lokalnie na urządzeniu. Dane nie są synchronizowane z Firebase.</p><h3>Premium</h3><p>Subskrypcja miesięczna lub roczna. Obejmuje konto, synchronizację Firebase, znajomych, grupy, wyzwania, treningi i tryb Trener oraz wszystkie funkcje lokalne.</p></section>
+        <section class="legal-section" id="data"><h2>3. Kategorie danych</h2><ul><li><strong>Konto i profil:</strong> adres e-mail, identyfikator Firebase, opcjonalnie imię, nazwisko, nazwa profilu, numer telefonu, ustawienia widoczności i zdjęcie profilu.</li><li><strong>Dane wspinaczkowe:</strong> drogi, bouldery, projekty, próby, sesje, wyceny, style przejścia, tagi, daty, miejsce, notatki, współrzędne GPS i wyniki testów sportowych.</li><li><strong>Dane społecznościowe:</strong> relacje znajomych, blokady, grupy, zaproszenia, wyzwania, postęp wyzwań i umówione treningi.</li><li><strong>Dane zakupu:</strong> identyfikator produktu, status uprawnienia, token zakupu i okres ważności potrzebne do potwierdzenia Lifetime Local Pro lub Premium. Pełne dane karty nie trafiają do Climbing Diary.</li><li><strong>Dane diagnostyczne:</strong> informacje o awarii, wersji aplikacji, systemie, modelu urządzenia i identyfikatorze instalacji dostarczane przez Firebase Crashlytics.</li></ul><p>Załączniki zdjęciowe i filmy przypisane do dróg lub projektów pozostają obecnie na urządzeniu i nie są przesyłane do Firebase.</p></section>
+        <section class="legal-section" id="purposes"><h2>4. Cele i podstawy przetwarzania</h2><ul><li>realizacja działania aplikacji, synchronizacji i zakupionego planu — wykonanie umowy lub podjęcie działań na żądanie użytkownika;</li><li>obsługa konta, znajomych, zaproszeń, wyzwań i treningów — wykonanie usługi żądanej przez użytkownika;</li><li>lokalizacja, kontakty, aparat, media i powiadomienia — zgoda wyrażona przez wybór funkcji i uprawnienie Androida;</li><li>diagnostyka awarii, zabezpieczenie usługi i zapobieganie nadużyciom — uzasadniony interes polegający na utrzymaniu stabilnej i bezpiecznej aplikacji;</li><li>rozliczenia i wymagane zapisy transakcyjne — obowiązek prawny oraz obsługa umowy zakupu.</li></ul><p>Użytkownik może cofnąć uprawnienia systemowe w ustawieniach Androida. Nie wpływa to na zgodność wcześniejszego przetwarzania z prawem.</p></section>
+        <section class="legal-section" id="permissions"><h2>5. Uprawnienia Androida</h2><ul><li><strong>Lokalizacja:</strong> pobierana wyłącznie po wybraniu funkcji dodania bieżącej pozycji GPS do wpisu.</li><li><strong>Kontakty:</strong> po wybraniu kontaktu aplikacja używa wskazanego numeru do sprawdzenia, czy dana osoba ma konto i zezwoliła na wyszukiwanie po telefonie. Aplikacja nie publikuje książki adresowej.</li><li><strong>Aparat i media:</strong> służą do ustawienia zdjęcia profilu i dodania lokalnego załącznika do drogi lub projektu.</li><li><strong>Powiadomienia:</strong> informują o zaproszeniach, treningach, wyzwaniach i terminach.</li><li><strong>Kalendarz:</strong> wybrane wydarzenie może zostać przekazane do aplikacji kalendarza telefonu. Climbing Diary nie dodaje go bez działania użytkownika.</li></ul></section>
+        <section class="legal-section" id="providers"><h2>6. Dostawcy i przekazywanie danych</h2><p>Dane nie są sprzedawane. W zakresie koniecznym do działania aplikacji mogą być przetwarzane przez:</p><ul><li><strong>Google Firebase:</strong> Authentication, Cloud Firestore, Cloud Functions, Crashlytics i App Check;</li><li><strong>Google Play:</strong> dystrybucja aplikacji, rozliczenie zakupów i subskrypcji oraz weryfikacja uprawnień;</li><li><strong>GitHub Pages:</strong> publiczne udostępnienie strony aplikacji i dokumentów pomocy.</li></ul><p>Usługi Google mogą przetwarzać dane poza Europejskim Obszarem Gospodarczym zgodnie z mechanizmami ochrony stosowanymi przez dostawcę. Szczegóły znajdują się w politykach prywatności Google i Firebase.</p></section>
+        <section class="legal-section" id="security"><h2>7. Bezpieczeństwo</h2><p>Stosowane są połączenia szyfrowane podczas transmisji, uwierzytelnianie Firebase, reguły dostępu Firestore przypisane do użytkownika, Firebase App Check oraz ograniczenia dostępu wynikające z planu. Dane lokalne korzystają z izolowanej przestrzeni aplikacji Android.</p><p>Żaden sposób przechowywania nie eliminuje całkowicie ryzyka. Użytkownik Lifetime Local Pro powinien wykonywać eksport, ponieważ wydawca nie może odtworzyć danych, które istniały wyłącznie na utraconym lub wyczyszczonym urządzeniu.</p></section>
+        <section class="legal-section" id="retention"><h2>8. Przechowywanie danych</h2><ul><li>Dane lokalne pozostają na urządzeniu do ich usunięcia, wyczyszczenia danych aplikacji albo odinstalowania aplikacji.</li><li>Dane chmurowe są dostępne podczas Trial Premium i aktywnej subskrypcji Premium.</li><li>Po zakończeniu Premium dane chmurowe mogą być zachowane do 12 miesięcy w celu odnowienia dostępu lub eksportu, a następnie usunięte lub zanonimizowane, o ile prawo nie wymaga dłuższego zachowania wybranych informacji.</li><li>Dane diagnostyczne i techniczne są przechowywane przez okres potrzebny do analizy stabilności i zgodnie z ustawieniami retencji Firebase.</li><li>Informacje o transakcjach mogą być zachowane przez Google Play i wydawcę przez okres wymagany przepisami rozliczeniowymi.</li></ul></section>
+        <section class="legal-section" id="rights"><h2>9. Prawa użytkownika</h2><p>W zależności od miejsca zamieszkania użytkownik może mieć prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia, sprzeciwu oraz cofnięcia zgody.</p><p>Żądanie można wysłać na <a href="mailto:climbingdiaryapp@gmail.com">climbingdiaryapp@gmail.com</a>. Dla ochrony konta może być potrzebne potwierdzenie z adresu e-mail używanego w aplikacji. Użytkownik może również złożyć skargę do właściwego organu ochrony danych, w Polsce do Prezesa Urzędu Ochrony Danych Osobowych.</p></section>
+        <section class="legal-section" id="deletion"><h2>10. Usunięcie konta i danych</h2><div class="legal-callout danger"><strong>Usunięcie konta i anulowanie subskrypcji to dwie różne czynności.</strong> Subskrypcją zarządza Google Play. Usunięcie konta inicjuje usunięcie konta i powiązanych danych chmurowych.</div><p>Konto można usunąć w aplikacji: <strong>Profil → Dane i prywatność → Usuń konto i dane w chmurze</strong>. Bez dostępu do aplikacji można skorzystać ze strony <a href="delete-account.html">Usunięcie konta Climbing Diary</a> lub wysłać wiadomość na adres kontaktowy.</p><p>Żądania są realizowane możliwie szybko, zwykle nie później niż w ciągu 30 dni. Wybrane informacje mogą pozostać dłużej, jeśli wymagają tego przepisy, bezpieczeństwo lub rozliczenie transakcji. Lokalną kopię na własnym urządzeniu można usunąć przez wyczyszczenie danych albo odinstalowanie aplikacji.</p></section>
+        <section class="legal-section" id="children"><h2>11. Osoby małoletnie</h2><p>Aplikacja nie jest projektowana jako usługa skierowana bezpośrednio do dzieci. Jeżeli korzysta z niej osoba małoletnia w ramach sekcji sportowej, rodzic, opiekun lub organizator powinien zapewnić odpowiednią zgodę i nadzór zgodnie z lokalnym prawem.</p></section>
+        <section class="legal-section" id="changes"><h2>12. Zmiany polityki</h2><p>Polityka może być aktualizowana wraz z rozwojem aplikacji, zmianą dostawców lub wymogów prawnych. Data aktualizacji jest publikowana na początku dokumentu. Istotne zmiany mogą być dodatkowo komunikowane w aplikacji.</p><p>Pytania można kierować na <a href="mailto:climbingdiaryapp@gmail.com">climbingdiaryapp@gmail.com</a>.</p></section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><a class="wordmark" href="/"><span class="wordmark-mark" aria-hidden="true"></span><span style="color:#fff">Climbing Diary</span></a><p class="footer-copy">Dokumenty prywatności i pomocy aplikacji Android.</p></div><div><h2 class="footer-title">Dokumenty</h2><div class="footer-links"><a href="privacy-policy.html">Polityka prywatności</a><a href="terms.html">Warunki korzystania</a><a href="delete-account.html">Usunięcie konta</a></div></div><div><h2 class="footer-title">Kontakt</h2><div class="footer-links"><a href="mailto:climbingdiaryapp@gmail.com">climbingdiaryapp@gmail.com</a><a href="/">Strona główna</a></div></div></div><div class="footer-bottom">© <span data-year>2026</span> Climbing Diary.</div></div></footer>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>

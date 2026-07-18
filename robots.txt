@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://climbingdiaryapp.github.io/sitemap.xml

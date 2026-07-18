@@ -1,25 +1,24 @@
 # Climbing Diary website
 
-Public landing page and support/account deletion page for Climbing Diary.
+Public website, help and legal documents for the Climbing Diary Android app.
 
-Live URL:
+Live site: <https://climbingdiaryapp.github.io/>
 
-`https://climbingdiaryapp.github.io/`
+## Languages
 
-Privacy policy:
+- Polish: `/`
+- English: `/en/`
+- German: `/de/`
+- Spanish: `/es/`
 
-`https://climbingdiaryapp.github.io/privacy-policy.html`
+Each language includes the landing page, privacy policy, account deletion instructions and terms of use.
 
-Repository:
+## Publishing
 
-`https://github.com/ClimbingDiaryApp/ClimbingDiaryApp.github.io`
+GitHub Pages publishes the `main` branch from the repository root. The site is plain HTML, CSS and JavaScript and does not need a build step.
 
-GitHub Pages settings:
+## Verification
 
-- Source: Deploy from a branch
-- Branch: main
-- Folder: /root
+Run `node .site-check.cjs` before publishing. The script checks all language versions, required legal pages, images and local links without external packages.
 
-The private Android application repository remains separate:
-
-`https://github.com/ClimbingDiaryApp/ClimbingDiaryApp`
+The shared application artwork is stored in `assets/ikonacd.png`; optimized web and Google Play variants are generated from that source.
