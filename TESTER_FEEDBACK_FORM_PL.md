@@ -35,9 +35,9 @@ Ten formularz jest przeznaczony dla osób, które już dołączyły do testów z
 | 11 | Zrzut ekranu lub nagranie | Przesyłanie pliku | Nie | Maks. 3 pliki; tylko gdy nie zawierają danych wrażliwych. |
 | 12 | Czy możemy dopytać o to zgłoszenie? | Jednokrotny wybór | Tak | Tak; Nie |
 
-## Dodatkowa sekcja po 7 dniach
+## Przypomnienie w połowie testu
 
-Wyślij testerom krótkie przypomnienie z tym samym linkiem. Poproś wtedy szczególnie o sprawdzenie: logowania, rejestracji, synchronizacji danych, Premium Trial oraz innych funkcji korzystających z Firebase.
+Wyślij testerom krótkie przypomnienie z tym samym linkiem mniej więcej w połowie testu. Poproś wtedy szczególnie o sprawdzenie: logowania, rejestracji, synchronizacji danych, Premium Trial oraz innych funkcji korzystających z Firebase.
 
 ## Jak przekazać odpowiedzi do analizy
 
