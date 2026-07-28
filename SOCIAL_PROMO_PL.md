@@ -8,6 +8,24 @@ Ważne linki:
 - formularz dla testerów: <https://forms.gle/uwHwy6EnT2YPHUeC6>
 - Facebook: <https://www.facebook.com/people/Climbing-Diary/61592101796597/>
 
+## Wiadomość do testerów — wyślij po zebraniu grupy
+
+> Cześć! Dzięki za udział w testach Climbing Diary. 🧗
+>
+> 1. Otwórz otrzymany link na telefonie z Androidem, będąc zalogowanym/zalogowaną na właściwe konto Google.
+> 2. Kliknij **„Dołącz do testu”**, a następnie zainstaluj aplikację z Google Play.
+> 3. Pozostań w programie testowym przez minimum 14 dni — nie wypisuj się z niego w tym czasie.
+> 4. Korzystaj z aplikacji normalnie: zapisuj wspinanie, sprawdzaj funkcje i zwracaj uwagę na to, co jest intuicyjne, a co wymaga poprawy.
+>
+> Błędy i uwagi zgłaszaj przede wszystkim bezpośrednio w aplikacji: **Pomoc → Zgłoś błąd** albo **Pomoc → Kontakt**.
+>
+> Możesz też napisać na: **climbingdiaryapp@gmail.com**<br>
+> Strona projektu i podręcznik: https://climbingdiaryapp.github.io/
+>
+> Dziękuję — Twoje opinie realnie pomogą przed premierą!
+
+**Wskazówka dla organizatora:** wyślij tę wiadomość wraz z indywidualnym linkiem Google Play, gdy masz już potwierdzoną grupę co najmniej 12 osób.
+
 ## Post 1 — poznaj aplikację
 
 > 🧗 **Climbing Diary — Twój dziennik wspinania w jednym miejscu**
@@ -65,5 +83,5 @@ Ważne linki:
 
 1. Najpierw opublikuj post 1, by pokazać, czym jest aplikacja.
 2. Następnego dnia opublikuj rolkę, a po niej przypnij post 2 z formularzem.
-3. W komentarzu pod każdym materiałem przypomnij o formularzu; nie wklejaj jeszcze linku do instalacji z Google Play, dopóki test nie będzie aktywny.
-4. Gdy link dołączenia do testu będzie aktywny, dodaj go do przypiętego posta i strony — tylko dla osób, które zgłosiły się jako testerzy.
+3. W komentarzu pod każdym materiałem przypomnij o formularzu. Link Google Play wysyłaj prywatnie osobom, które potwierdziły udział w teście.
+4. Po uruchomieniu grupy przypomnij testerom o kanałach zgłaszania błędów w aplikacji oraz o e-mailu zapasowym.
