@@ -17,6 +17,10 @@ Ważne linki:
 > 3. Pozostań w programie testowym przez minimum 14 dni — nie wypisuj się z niego w tym czasie.
 > 4. Korzystaj z aplikacji normalnie: zapisuj wspinanie, sprawdzaj funkcje i zwracaj uwagę na to, co jest intuicyjne, a co wymaga poprawy.
 >
+> **Ważne:** 14 dni dotyczy udziału w teście Google Play. Okres próbny Premium w aplikacji trwa osobno 7 dni od chwili jego aktywacji — te dwa okresy nie są ze sobą powiązane.
+>
+> Jeśli aktywujesz Premium Trial, postaraj się przez pierwsze 7 dni sprawdzić również funkcje korzystające z Firebase, np. logowanie i rejestrację, synchronizację danych oraz funkcje wymagające konta. To szczególnie ważna część testu.
+>
 > Błędy i uwagi zgłaszaj przede wszystkim bezpośrednio w aplikacji: **Pomoc → Zgłoś błąd** albo **Pomoc → Kontakt**.
 >
 > Możesz też napisać na: **climbingdiaryapp@gmail.com**<br>
