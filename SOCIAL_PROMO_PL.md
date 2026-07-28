@@ -18,9 +18,9 @@ Ważne linki:
 > 4. Pierwszego dnia uruchom Trial Premium, a następnie utwórz konto albo się zaloguj. Dzięki temu aplikacja pobierze właściwą datę dostępu z serwera.
 > 5. Korzystaj z aplikacji normalnie: zapisuj wspinanie, sprawdzaj funkcje i zwracaj uwagę na to, co jest intuicyjne, a co wymaga poprawy.
 >
-> **Ważne:** standardowy opis w aplikacji może wspominać o trialu 7-dniowym. Wyłącznie na czas tych testów zamkniętych Trial Premium jest jednak wydłużony po zalogowaniu do **14 dni**, aby można było normalnie testować aplikację przez cały wymagany okres.
+> **Ważne:** standardowy opis w aplikacji może wspominać o trialu 7-dniowym. Wyłącznie na czas tych testów zamkniętych Trial Premium jest jednak wydłużony po zalogowaniu do **20 dni**. Wymóg Google Play pozostaje osobny: trzeba pozostać zapisanym/zapisaną do testu przez co najmniej 14 dni.
 >
-> W trakcie całych 14 dni sprawdzaj również funkcje korzystające z Firebase, np. logowanie i rejestrację, synchronizację danych oraz funkcje wymagające konta. To szczególnie ważna część testu.
+> W trakcie testu sprawdzaj również funkcje korzystające z Firebase, np. logowanie i rejestrację, synchronizację danych oraz funkcje wymagające konta. To szczególnie ważna część testu.
 >
 > Błędy i uwagi zgłaszaj przede wszystkim bezpośrednio w aplikacji: **Pomoc → Zgłoś błąd** albo **Pomoc → Kontakt**.
 >
