@@ -4,6 +4,7 @@ const path = require("path");
 const root = __dirname;
 const requiredFiles = [
   "index.html",
+  "manual.html",
   "privacy-policy.html",
   "delete-account.html",
   "terms.html",
